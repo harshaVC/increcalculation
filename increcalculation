@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class increcalculation {
+  public static void main(String[] args) {
+    Scanner s= new Scanner(System.in);
+    System.out.println("Enter the salary");
+    int Salary= s.nextInt();
+    System.out.println("Enter the Performance appraisal rating");
+    float appraisal= s.nextFloat();
+    int increment=0;
+    int appsal;
+    if((Salary>0) && (appraisal >0 && appraisal<=5))
+    {
+      if(appraisal>0 && appraisal<=3)
+      {
+        increment+=10;
+      }
+      else if(appraisal>=3.1 && appraisal<=4)
+      {
+        increment+=25;
+      }
+      else
+      {
+        increment+=30;
+      }
+      Salary= Salary+(Salary * increment/100);
+      System.out.println(Salary);
+    }
+    else
+    {
+      System.out.println("Invalid Input");
+    }
+  }
+}
